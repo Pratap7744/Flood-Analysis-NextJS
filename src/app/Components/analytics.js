@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend, ResponsiveContainer } from 'recharts';
 import Sidebar from './Sidebar';
 import NavBar from './navBar';
-export default function Dashboard() {
+export default function Analytics() {
   // Mock data for charts
   const currentStaffingData = [
     { year: '2016', value: 5000 },
@@ -25,10 +25,10 @@ export default function Dashboard() {
   ];
 
   const regionalData = [
-    { region: 'North', risk: 2000, readiness: 3500 },
-    { region: 'South', risk: 1500, readiness: 2700 },
-    { region: 'East', risk: 1400, readiness: 2000 },
-    { region: 'West', risk: 3200, readiness: 1800 },
+    { index: 1, region: "North", risk: 4000, readiness: 2400 },
+    { index: 2, region: "South", risk: 3000, readiness: 1398 },
+    { index: 3, region: "East", risk: 2000, readiness: 9800 },
+    { index: 4, region: "West", risk: 2780, readiness: 3908 }
   ];
 
   return (
@@ -96,7 +96,7 @@ export default function Dashboard() {
   
           {/* Charts Section */}
           <div className='flex justify-center'>
-          <div className="grid grid-cols-2 gap-6 mb-8 w-full max-w-4xl">
+          <div className="grid grid-cols-2 gap-6 mb-8 w-full max-w-6xl">
                 <div>
                   <h2 className="text-center text-xl text-gray-700 font-medium mb-4">Current Staffing</h2>
                   <div className="bg-white rounded-lg shadow-sm p-4 h-64">

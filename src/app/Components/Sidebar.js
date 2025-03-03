@@ -25,7 +25,7 @@ export default function Sidebar() {
 
           {/* Job Description */}
           <Link
-            href="/job-description"
+            href="/jobDesc"
             className="px-6 py-4 flex items-center text-gray-400 hover:text-blue-700 border-l-4 border-transparent hover:border-blue-700 transition-all"
           >
             <FileText className="h-5 w-5" />
